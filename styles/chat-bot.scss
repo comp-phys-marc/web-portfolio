@@ -1,0 +1,82 @@
+.chat-bot {
+    position: fixed;
+    height: $large-size;
+    width: $large-size;
+    right: $medium-size;
+    bottom: $medium-size;
+    box-shadow: $tiny-size $tiny-size $tiny-size $dark;
+    border-radius: $normal-size;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.chat-window {
+    position: fixed;
+    height: 7 * $large-size;
+    width: 5.75 * $large-size;
+    right: $medium-size;
+    bottom: 2 * $large-size;
+    background-color: $grey;
+    border-radius: $small-size;
+    border-width: 1;
+    padding-left: $medium-size;
+    padding-bottom: $medium-size;
+    box-shadow: $tiny-size $tiny-size $tiny-size $dark;
+    z-index: 3;
+
+    @include element(messages) {
+        overflow: scroll;
+        max-height: 5.75 * $large-size;
+        position: relative;
+        padding-top: $medium-size;
+        padding-right: $small-size;
+
+        @include element(bot-message) {
+            background-color: $orange;
+            border-radius: $small-size;
+            border-width: 1;
+            padding-left: $small-size;
+            padding-right: $small-size;
+            padding-top: $xtiny-size;
+            padding-bottom: $xtiny-size;
+            margin-bottom: $small-size;
+            margin-right: $xlarge-size;
+            box-shadow: $xtiny-size $xtiny-size $xtiny-size $dark;
+            font-size: small;
+        }
+    }
+
+    @include element(interface) {
+        display: flex;
+        justify-content: space-between;
+        width: 5 * $large-size;
+        float: right;
+        margin-right: $small-size;
+
+        input:focus{
+            outline: none;
+        }
+
+        @include element(input) {
+            width: 4 * $large-size;
+            border-top-width: 0;
+            border-left-width: 0;
+            border-right-width: 0;
+            border-bottom-width: 1;
+            border-bottom-color: $secondary;
+            float: right;
+            margin-top: $normal-size;
+            background-color: $grey;
+            display: inline-flex;
+        }
+    
+        @include element(submit) {
+            width: $medium-size + $small-size;
+            height: $medium-size;
+            border-radius: 0;
+            float: right;
+            display: inline-flex;
+            margin-top: $normal-size;
+        }
+    }
+}

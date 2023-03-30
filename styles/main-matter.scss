@@ -1,0 +1,82 @@
+
+.main-matter {
+    width: 100vw;
+    position: absolute;
+    top: 100vh;
+    overflow: hidden;
+
+    @include element(introduction) {
+        text-align: center;
+        align-items: center;
+        min-height: 180vh;
+        padding-top: 25vh;
+
+        @include element(highlights) {
+            display: grid;
+            grid-template-columns: repeat(2, 45% [col-start]);
+            column-gap: 10%;
+            row-gap: $large-size;
+            padding: $xlarge-size;
+            padding-top: $xlarge-size;
+
+            iframe {
+                box-shadow: $small-size $small-size $small-size $violet;
+            }
+
+            img {
+                max-width: 2 * $xlarge-size;
+                border-radius: 20px;
+            }
+
+            @include element(item) {
+                display: grid;
+                grid-template-columns: [col-start] 30% [col-start] 60%;
+                column-gap: 9%;
+
+                div {
+                    text-align: left;
+                    padding-top: 5vh;
+                }
+
+                @include element(button) {
+                    background-color: $violet;
+                    padding: $tiny-size;
+                    color: $white;
+                    border-style: none;
+                    border-radius: 10px;
+                    box-shadow: $xtiny-size $xtiny-size $xtiny-size $darker;
+                    cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: $text;
+                    }
+                }
+            }
+        }
+
+        @include element(coffee) {
+            margin: $large-size;
+            width: $xlarge-size;
+            height: auto;
+        }
+
+        @include element(call-to-action) {
+            margin: $xlarge-size;
+            cursor: pointer;
+        }
+
+        @include element(arrow) {
+            margin-top: -100px;
+        }
+    }
+
+    @include smallScreen() {
+        max-width: 650px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $cool;
+}

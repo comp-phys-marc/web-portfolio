@@ -1,0 +1,227 @@
+.header {
+    width: 100vw;
+
+    background-color: $black;
+    color: $light;
+
+    z-index: 3;
+
+    .banner {
+        display: grid;
+
+        @include smallScreen {
+            display: flex;
+        }
+    
+        height: inherit;
+        max-width: $max-width;
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-size: small;
+
+        p {
+            margin-top: $small-size;
+        }
+    
+        @include element(dropdown) {
+            display: block;
+
+            grid-column-start: 1;
+            grid-column-end: 1;
+            
+            select {
+                color: $light;
+                background-color: $dark;
+                border-color: transparent;
+    
+                height: inherit;
+                margin-top: $small-size;
+                margin-left: $large-size;
+            }
+
+            @include smallScreen {
+                display: none;
+            }
+        }
+    
+        @include element(text) {
+            grid-column-start: 2;
+            grid-column-end: 2;
+
+            margin-right: 5vw;
+
+            @include smallScreen {
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            p {
+                text-align: right;
+            }
+        }
+    
+        @include element(right) {
+            display: block;
+                
+            grid-column-start: 3;
+            grid-column-end: 3;
+
+            div {
+                float: right;
+                cursor: pointer;
+
+                display: inline-grid;
+                grid-template-columns: 130px [col-start] 20px [col-start] 80px [col-start];
+                
+                @include element(physics) {
+                    grid-column-start: 1;
+                    grid-column-end: 1;
+                }
+        
+                @include element(linkedin) {
+                    grid-column-start: 3;
+                    grid-column-end: 3;
+        
+                    text-align: center;
+                }
+            }
+
+            @include smallScreen() {
+                display: none;
+            }
+        }
+    }
+}
+
+.subheader {
+    height: 62px;
+    overflow: hidden;
+    font-size: small;
+    color: $dark;
+    padding-left: $small-size;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-color: $black;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: groove;
+
+    .utility-bar {
+
+        @include smallScreen() {
+            display: grid;
+            grid-template-columns: repeat(3, 33% [col-start]);
+        }
+
+        height: inherit;
+        max-width: $max-width - $medium-size * 4;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        @include smallScreen() {
+            margin-left: $medium-size;
+            margin-right: $medium-size;
+        }
+
+        border-bottom: 1px solid $grey;
+
+        @include element(left) {
+            display: inline-grid;
+            grid-template-columns: $large-size + $medium-size [col-start] 2 * $large-size [col-start] 3 * $medium-size [col-start] $xlarge-size [col-start] 2 * $large-size [col-start];
+
+            img {
+                display: block;
+                width: $large-size;
+                
+                @include smallScreen() {
+                    display: none;
+                }
+
+                margin-top: $small-size;
+            }
+
+            svg {
+                padding-top: $tiny-size;
+                margin: $normal-size;
+                height: 24px;
+
+                @include smallScreen() {
+                    padding-top: $small-size;
+                    margin: $small-size;
+                }
+            }
+
+            @include element(link) {
+                margin-top: $medium-size;
+                margin-left: $normal-size;
+
+                display: block;
+                text-decoration: none;
+                color: $black;
+
+                cursor: pointer;
+                
+                @include smallScreen() {
+                    display: none;
+                }
+            }
+
+            @include element(icon) {
+                display: none;
+                
+                @include smallScreen() {
+                    display: block;
+                }
+            }
+        }
+
+        @include element(right) {
+            float: right;
+            height: inherit;
+
+            margin-left: auto;
+            margin-right: $small-size;
+
+            @include element(icon) {
+                display: inline-block;
+
+                padding-top: $tiny-size;
+                margin: $normal-size;
+                height: 24px;
+
+                @include smallScreen() {
+                    margin-left: $small-size;
+                    margin-right: $small-size;
+                }
+
+                @include modifier(large-only) {
+                    @include smallScreen() {
+                        display: none;
+                    }
+                }
+            }
+
+            vr {
+                display: inline-block;
+                width: 1px;
+                margin-bottom: $normal-size;
+                border-right: 1px solid $grey;
+            }
+
+            div {
+                display: inline-block;
+                height: 95%;
+                top: $large-size;
+            }
+
+            p {
+                float: right;
+                margin-left: - $small-size;
+            }
+        }
+    }
+}

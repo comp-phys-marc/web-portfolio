@@ -1,0 +1,216 @@
+.info-grid {
+    display: grid;
+    grid-template-columns: 65.5% [col-start] 34.5% [col-start];
+
+    color: $dark;
+
+    @include smallScreen() {
+        grid-template-columns: repeat(1, 100% [col-start]);
+    }
+
+    margin: $small-size;
+    padding: $medium-size;
+
+    text-align: left;
+
+    @include element(left) {
+        border-right: 1px solid $grey;
+
+        padding: $medium-size;
+
+        @include smallScreen() {
+            border-right: none;
+        }
+    
+        ul {
+            color: darken($muted, 5%);
+            line-height: 2.5em;
+            margin-left: - $medium-size;
+        }
+
+        @include element(form) {
+            display: none;
+
+            @include smallScreen() {
+                display: block;
+            }
+        }
+    }
+
+    @include element(details) {
+        color: darken($muted, 5%);
+        height: $xlarge-size;
+        border-bottom: 1px solid $grey;
+        
+        margin-right: $large-size;
+        margin-bottom: $large-size;
+
+        @include modifier(nounderline) {
+            border-bottom: none;
+        }
+    }
+
+    @include element(right) {
+        margin-left: $medium-size;
+
+        @include smallScreen() {
+            display: none;
+        }
+    }
+
+    @include element(price) {
+        font-size: xx-large;
+    }
+
+    @include element(rating) {
+        small {
+            transform: translate(0, - $tiny-size);
+            display: inline-block;
+            color: $brand;
+        }
+    }
+
+    svg {
+        height: 1.4 * $normal-size;
+        margin-left: - $tiny-size;
+    }
+
+    // inspired by https://moderncss.dev/pure-css-custom-styled-radio-buttons/
+
+    input[type="radio"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--form-control-color);
+    }
+      
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+    .radio {
+        appearance: none;
+        margin: $tiny-size;
+        font: inherit;
+        width: 2.2em;
+        height: 2.2em;
+        border: 0.15em solid $grey;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+
+        @include modifier(light) {
+            background-color: $light;
+        }
+
+        @include modifier(middle) {
+            background-color: $grey;
+        }
+
+        @include modifier(dark) {
+            background-color: $dark;
+        }
+    }
+
+    .size-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 21.5% [col-start]);
+        column-gap: 20px;
+        row-gap: 0;
+
+        @include modifier(horizontal) {
+            grid-template-columns: repeat(8, 10.5% [col-start]);
+            column-gap: 12px;
+
+            @include tinyScreen() {
+                grid-template-columns: repeat(4, 22% [col-start]);
+            }
+        }
+    }
+
+    .square-radio {
+        appearance: none;
+        margin: 1px;
+        font: inherit;
+        width: 5rem;
+        height: 4em;
+        border: 0.1em solid $lightgrey;
+        border-radius: 5px;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        background-color: transparent;
+
+        @include modifier(disabled) {
+            background: linear-gradient(to bottom right, $lightergrey, $lightergrey 49%, $lightgrey 49%, $lightgrey 51%, $lightergrey 51%, $lightergrey);
+            cursor: not-allowed;
+        }
+
+        @include smallScreen() {
+            width: 3.75rem;
+        }
+
+        @include tinyScreen() {
+            width: 100%;
+        }
+    }
+      
+    .form-control {
+        display: inline-block;
+        margin-top: 1em;
+
+        text-align: center;
+
+        @include modifier(disabled) {
+            color: $lightgrey;
+        }
+
+        span {
+            height: 0px;
+            display: block;
+            transform: translate(0, - 2.8em);
+        }
+    }
+
+    .radio:focus {
+        outline: max(3px, 0.15em) solid darken($grey, 15%);
+        outline-offset: max(2px, 0.15em);
+    }
+
+    .square-radio:focus {
+        outline: max(3px, 0.15em) solid $brand;
+    }
+
+    .square-radio--disabled:focus {
+        outline: max(3px, 0.15em) solid transparent;
+    }
+
+    .size-text {
+        display: inline-block;
+
+        @include modifier(right) {
+            float: right;
+            color: $brand;
+        }
+    }
+
+    @include element(buy) {
+        height: 50px;
+        width: 100%;
+        
+        color: $light;
+        background-color: $brand;
+        
+        margin-top: $large-size;
+        margin-bottom: $large-size;
+        
+        border-color: transparent;
+        border-radius: $tiny-size;
+
+        font-size: medium;
+    }
+}

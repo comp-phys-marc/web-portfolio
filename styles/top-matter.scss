@@ -1,0 +1,133 @@
+@keyframes fly {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-21vw, 50vh) rotate(-40deg);
+    }
+    
+    100% {
+        transform: translate(-42vw, 101vh) rotate(-5deg);
+    }
+}
+
+@keyframes screen-saver {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-40px, -20px);
+    }
+
+    40% {
+        transform: translate(-0px, -80px);
+    }
+    
+    60% {
+        transform: translate(115px, -60px);
+    }
+
+    80% {
+        transform: translate(0, 0);
+    }
+}
+
+.top-matter {
+    text-align: center;
+    background-color: $white;
+    padding-top: $xlarge-size;
+    padding-bottom: $xlarge-size;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    @include element(plane) {
+        position: absolute;
+        height: $large-size;
+        top: 0;
+        width: auto;
+        animation: fly 10s linear infinite;
+        animation-fill-mode: forwards;
+        z-index: 3;
+    }
+
+    @include element(logo) {
+        position: absolute;
+        height: $normal-size;
+        width: auto;
+        bottom: 445px;
+        left: $xlarge-size + 750px;
+        animation: screen-saver 5s linear infinite;
+        z-index: 3;
+    }
+
+    @include element(images) {
+        align-items: center;
+
+        @include element(desk) {
+            margin: auto;
+            position: absolute;
+            height: 7 * $xlarge-size;
+            width: 9 * $xlarge-size;
+            bottom: 0;
+            left: $xlarge-size;
+        }
+
+        @include element(laptop) {
+            height: 6 * $large-size;
+            width: auto;
+            border-radius: 0;
+            cursor: pointer;
+            position: absolute;
+            bottom: 320px;
+            left: $xlarge-size + 615px;
+            z-index: 2;
+
+            @include modifier(selected) {
+                display: none;
+                height: 6.75 * $large-size;
+                bottom: 305px;
+                left: $xlarge-size + 600px;
+            }
+        }   
+    
+        @include element(mobile) {
+            height: $large-size;
+            width: auto;
+            cursor: pointer;
+            position: absolute;
+            bottom: 400px;
+            left: $xlarge-size + 250px;
+            z-index: 2;
+
+            @include modifier(selected) {
+                display: none;
+                height: $large-size + $medium-size;
+                bottom: 390px;
+                left: $xlarge-size + 240px;
+            }
+        }   
+    
+        @include element(chips) {
+            height: $medium-size;
+            width: auto;
+            cursor: pointer;
+            position: absolute;
+            bottom: 350px;
+            left: $xlarge-size + 180px;
+            z-index: 2;
+
+            @include modifier(selected) {
+                height: $medium-size + $tiny-size;
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.deborah {
+    background-color: black;
+}
+
+.site {
+    display: grid;
+    grid-template-columns: 34% [col-start] 66% [col-start];
+
+    padding-top: 25vh;
+    padding-right: $xlarge-size;
+
+    color: $text;
+
+    height: 85vh;
+
+    @include element(description) {
+        padding-top: $xlarge-size;
+        padding-left: $xlarge-size;
+
+        @include element(call-to-action) {
+            width: 100%;
+            text-align: center;
+            padding-top: $small-size;
+            cursor: pointer;
+
+            @include element(arrow) {
+                margin-top: -$normal-size;
+            }
+        }
+    }
+}

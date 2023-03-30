@@ -1,0 +1,33 @@
+/// Element Mixin
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+/// Modifier Mixin
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+/// Small Screen Size Mixin
+/// @access public
+@mixin smallScreen() {
+    @media only screen and (max-width: 1000px) {
+        @content;
+    }
+}
+
+/// Tiny Screen Size Mixin
+/// @access public
+@mixin tinyScreen() {
+    @media only screen and (max-width: 630px) {
+        @content;
+    }
+}

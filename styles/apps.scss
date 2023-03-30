@@ -1,0 +1,118 @@
+.leadme {
+    background-color: $leadme;
+}
+
+.cents {
+    background-color: $cents;
+}
+
+.yata {
+    background-color: $yata;
+}
+
+.pass {
+    background-color: $pass;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 66% [col-start] 34% [col-start];
+
+    @include smallScreen {
+        grid-template-columns: 60% [col-start] 40% [col-start];
+    }
+
+    @include tinyScreen {
+        grid-template-columns: 100% [col-start];
+        text-align: center;
+    }
+
+    padding-top: 25vh;
+    padding-left: $xlarge-size;
+    padding-right: $xlarge-size;
+
+    color: $text;
+
+    height: 85vh;
+
+    @include element(image) {
+        @include modifier(tiny) {
+            display: none;
+            max-height: 50vh;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: block;
+            }
+        }
+
+        @include modifier(small) {
+            display: none;
+
+            @include smallScreen {
+                display: block;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include modifier(large) {
+            display: block;
+            
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+    }
+
+    @include element(description) {
+        padding-top: $large-size;
+        padding-left: $xlarge-size;
+
+        @include tinyScreen {
+            padding-top: $small-size;
+            text-align: center;
+            padding-left: 0;
+            font-size: small;
+        }
+
+        @include modifier(large) {
+            display: block;
+
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include element(call-to-action) {
+            width: 100%;
+            text-align: center;
+            padding-top: $small-size;
+            cursor: pointer;
+
+            @include tinyScreen {
+                padding-top: $tiny-size;
+            }
+
+            @include element(arrow) {
+                margin-top: -$normal-size;
+            }
+        }
+    }
+}

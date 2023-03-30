@@ -1,0 +1,38 @@
+.site-map {
+    background-color: $white;
+
+    padding-left: $large-size;
+    padding-right: $large-size;
+    padding-top: $small-size;
+
+    height: 25vh;
+
+    color: $black;
+
+    @include element(grid) {
+        display: grid;
+        grid-template-columns: repeat(4, 23% [col-start]);
+        column-gap: 2.66%;
+        row-gap: $large-size;
+
+        @include smallScreen() {
+            column-gap: 10%;
+            grid-template-columns: 45% [col-start] 45% [col-start];
+        }
+
+        @include tinyScreen() {
+            column-gap: 10%;
+            grid-template-columns: 90% [col-start];
+        }
+        
+        @include element(option) {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
+    div {
+        margin-top: $normal-size;
+        color: $black;
+    }
+}
