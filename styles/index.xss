@@ -752,14 +752,15 @@ img {
 
 .app {
   display: grid;
-  grid-template-columns: 60% [col-start] 40% [col-start];
+  grid-template-columns: 66% [col-start] 34% [col-start];
   padding-top: 25vh;
+  padding-left: 100px;
   color: white;
   height: 85vh;
 }
 @media only screen and (max-width: 1000px) {
   .app {
-    grid-template-columns: 50% [col-start] 50% [col-start];
+    grid-template-columns: 60% [col-start] 40% [col-start];
   }
 }
 @media only screen and (max-width: 630px) {
@@ -826,7 +827,7 @@ img {
 }
 @media only screen and (max-width: 1000px) {
   .app__description {
-    padding-right: 10px;
+    padding-right: 0;
   }
 }
 .app__description--large {
@@ -932,4 +933,4 @@ body {
   font-family: Open Sans;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.xss.map */

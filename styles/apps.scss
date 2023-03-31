@@ -16,10 +16,10 @@
 
 .app {
     display: grid;
-    grid-template-columns: 66% [col-start] 34% [col-start];
+    grid-template-columns: 60% [col-start] 40% [col-start];
 
     @include smallScreen {
-        grid-template-columns: 60% [col-start] 40% [col-start];
+        grid-template-columns: 50% [col-start] 50% [col-start];
     }
 
     @include tinyScreen {
@@ -28,9 +28,6 @@
     }
 
     padding-top: 25vh;
-    padding-left: $xlarge-size;
-    padding-right: $xlarge-size;
-
     color: $text;
 
     height: 85vh;
@@ -80,12 +77,17 @@
     @include element(description) {
         padding-top: $large-size;
         padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
 
         @include tinyScreen {
             padding-top: $small-size;
             text-align: center;
             padding-left: 0;
             font-size: small;
+        }
+
+        @include smallScreen {
+            padding-right: $small-size;
         }
 
         @include modifier(large) {
