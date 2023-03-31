@@ -872,7 +872,7 @@ img {
 }
 @media only screen and (max-width: 1000px) {
   .site--right {
-    grid-template-columns: 45% [col-start] 55% [col-start];
+    grid-template-columns: 50% [col-start] 50% [col-start];
   }
 }
 @media only screen and (max-width: 630px) {
@@ -907,11 +907,13 @@ img {
 .site--right__description {
   padding-top: 100px;
   padding-left: 100px;
-  padding-right: 100px;
+  padding-right: 42px;
 }
 @media only screen and (max-width: 1000px) {
   .site--right__description {
     padding-top: 22px;
+    padding-left: 42px;
+    padding-right: 10px;
   }
 }
 @media only screen and (max-width: 630px) {

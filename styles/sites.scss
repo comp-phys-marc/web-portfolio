@@ -9,7 +9,7 @@
     padding-top: 25vh;
 
     @include smallScreen {
-        grid-template-columns: 45% [col-start] 55% [col-start];
+        grid-template-columns: 50% [col-start] 50% [col-start];
     }
 
     @include tinyScreen {
@@ -46,10 +46,12 @@
     @include element(description) {
         padding-top: $xlarge-size;
         padding-left: $xlarge-size;
-        padding-right: $xlarge-size;
+        padding-right: $large-size;
 
         @include smallScreen {
             padding-top: $medium-size;
+            padding-left: $large-size;
+            padding-right: $small-size;
         }
 
         @include tinyScreen {
