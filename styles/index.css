@@ -787,6 +787,7 @@ img {
 }
 .app__image--small {
   display: none;
+  margin-left: 22px;
 }
 @media only screen and (max-width: 1000px) {
   .app__image--small {
@@ -799,6 +800,7 @@ img {
   }
 }
 .app__image--large {
+  margin-left: 42px;
   display: block;
 }
 @media only screen and (max-width: 1000px) {

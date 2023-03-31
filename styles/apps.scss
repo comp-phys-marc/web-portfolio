@@ -33,6 +33,7 @@
     height: 85vh;
 
     @include element(image) {
+
         @include modifier(tiny) {
             display: none;
             max-height: 50vh;
@@ -51,6 +52,7 @@
 
         @include modifier(small) {
             display: none;
+            margin-left: $medium-size;
 
             @include smallScreen {
                 display: block;
@@ -62,6 +64,7 @@
         }
 
         @include modifier(large) {
+            margin-left: $large-size;
             display: block;
             
             @include smallScreen {
