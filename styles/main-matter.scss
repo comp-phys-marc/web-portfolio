@@ -19,23 +19,45 @@
             padding: $xlarge-size;
             padding-top: $xlarge-size;
 
-            iframe {
-                box-shadow: $small-size $small-size $small-size $violet;
+            @include smallScreen {
+                grid-template-columns: 100% [col-start];
             }
 
-            img {
-                max-width: 2 * $xlarge-size;
-                border-radius: 20px;
+            iframe {
+                box-shadow: $small-size $small-size $small-size $violet;
             }
 
             @include element(item) {
                 display: grid;
                 grid-template-columns: [col-start] 30% [col-start] 60%;
                 column-gap: 9%;
+                
+                @include tinyScreen {
+                    grid-template-columns: 100% [col-start];
+                    margin-bottom: $medium-size;
+                }
+
+                img {
+                    max-width: 2 * $xlarge-size;
+                    border-radius: 20px;
+
+                    @include tinyScreen {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
 
                 div {
                     text-align: left;
                     padding-top: 5vh;
+
+                    @include smallScreen {
+                        padding-top: 2vh;
+                    }
+
+                    @include tinyScreen {
+                        text-align: center;
+                    }
                 }
 
                 @include element(button) {
@@ -69,10 +91,6 @@
         @include element(arrow) {
             margin-top: -100px;
         }
-    }
-
-    @include smallScreen() {
-        max-width: 650px;
     }
 
     margin-left: auto;
