@@ -1,0 +1,213 @@
+.blue {
+    background-color: $blue;
+}
+
+.black {
+    background-color: $darker;
+}
+
+.white {
+    background-color: $white;
+}
+
+.bloch {
+    background-image: url('https://marcusedwards.me/web-portfolio/images/bloch.png');
+    background-repeat: repeat-x repeat-y;
+    background-size: 150px;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: 60% [col-start] 40% [col-start];
+
+    @include smallScreen {
+        grid-template-columns: 50% [col-start] 50% [col-start];
+    }
+
+    @include tinyScreen {
+        grid-template-columns: 100% [col-start];
+        text-align: center;
+    }
+
+    padding-top: 25vh;
+    color: $text;
+
+    height: 85vh;
+
+    @include element(image) {
+
+        @include modifier(tiny) {
+            display: none;
+            max-height: 50vh;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: block;
+            }
+        }
+
+        @include modifier(small) {
+            display: none;
+            margin-left: $medium-size;
+            max-height: 40vh;
+
+            @include smallScreen {
+                display: block;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include modifier(large) {
+            margin-left: $large-size;
+            display: block;
+            max-height: 60vh;
+            
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+    }
+
+    @include element(description) {
+        padding-top: $large-size;
+        padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
+
+        @include tinyScreen {
+            padding-top: $small-size;
+            text-align: center;
+            padding-left: 0;
+            font-size: small;
+        }
+
+        @include smallScreen {
+            padding-right: $medium-size;
+        }
+
+        @include modifier(large) {
+            display: block;
+
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include element(call-to-action) {
+            width: 100%;
+            text-align: center;
+            padding-top: $small-size;
+            cursor: pointer;
+
+            @include tinyScreen {
+                padding-top: $tiny-size;
+            }
+
+            @include element(arrow) {
+                margin-top: -$normal-size;
+            }
+        }
+    }
+}
+
+.section--right {
+    display: grid;
+    grid-template-columns: 34% [col-start] 66% [col-start];
+
+    padding-top: 62px;
+
+    @include smallScreen {
+        grid-template-columns: 50% [col-start] 50% [col-start];
+    }
+
+    @include tinyScreen {
+        grid-template-columns: 100% [col-start];
+        text-align: center;
+        font-size: small;
+    }
+
+    height: 85vh;
+
+    @include element(image) {
+
+        @include smallScreen {
+            margin-top: 15vh;
+        }
+
+        max-height: 90%;
+        max-width: 70%;
+        margin-top: 5vh;
+        margin-left: 10%;
+
+        width: auto;
+
+        @include tinyScreen {
+            display: none;
+        }
+
+        @include modifier(tiny) {
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            height: 25vh;
+            width: auto;
+
+            @include tinyScreen {
+                display: block;
+                margin-top: 15vh;
+            }
+        }
+    }
+
+    @include element(description) {
+        margin-top: $xlarge-size * 2;
+        margin-left: $xlarge-size;
+        margin-right: $large-size;
+        margin-bottom: $xlarge-size * 2;
+
+        padding: $small-size;
+
+        background-color: rgba(232, 235, 239, 0.5);
+
+        @include smallScreen {
+            margin-top: 15vh;
+            padding-top: $medium-size;
+            padding-left: $large-size;
+            padding-right: $small-size;
+        }
+
+        @include tinyScreen {
+            padding-left: $small-size;
+            padding-right: $small-size;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include element(call-to-action) {
+            width: 100%;
+            text-align: center;
+            padding-top: $small-size;
+            cursor: pointer;
+
+            @include element(arrow) {
+                margin-top: -$normal-size;
+            }
+        }
+    }
+}
