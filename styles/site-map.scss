@@ -7,24 +7,22 @@
 
     height: 30vh;
 
+    @include tinyScreen() {
+        display: none;
+    }
+
     color: $black;
 
     @include element(grid) {
         display: grid;
-        grid-template-columns: repeat(4, 23% [col-start]);
+        grid-template-columns: 33% [col-start] 33% [col-start] 33% [col-start];
         column-gap: 2.66%;
         row-gap: $large-size;
 
         @include smallScreen() {
             column-gap: 10%;
-            grid-template-columns: 45% [col-start] 45% [col-start];
         }
 
-        @include tinyScreen() {
-            column-gap: 10%;
-            grid-template-columns: 90% [col-start];
-        }
-        
         @include element(option) {
             text-decoration: none;
             color: $black;
