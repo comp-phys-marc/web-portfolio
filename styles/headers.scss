@@ -164,10 +164,6 @@
                 color: $black;
 
                 cursor: pointer;
-                
-                @include smallScreen() {
-                    display: none;
-                }
             }
 
             @include element(icon) {
