@@ -136,10 +136,6 @@
             img {
                 display: block;
                 width: $large-size;
-                
-                @include smallScreen() {
-                    display: none;
-                }
 
                 margin-top: $small-size;
             }

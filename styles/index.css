@@ -120,11 +120,6 @@
   width: 42px;
   margin-top: 10px;
 }
-@media only screen and (max-width: 1000px) {
-  .subheader .utility-bar__left img {
-    display: none;
-  }
-}
 .subheader .utility-bar__left svg {
   padding-top: 5px;
   margin: 15px;
