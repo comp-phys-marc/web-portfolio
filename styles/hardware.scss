@@ -10,6 +10,10 @@
     background-color: $white;
 }
 
+.k9 {
+    background-color: darkslategrey;
+}
+
 .bloch {
     background-image: url('https://marcusedwards.me/web-portfolio/images/bloch.png');
     background-repeat: repeat-x repeat-y;
@@ -167,10 +171,43 @@
             margin-right: auto;
             height: 25vh;
             width: auto;
+            max-width: 70%;
 
             @include tinyScreen {
                 display: block;
                 margin-top: 15vh;
+            }
+        }
+
+        @include modifier(small) {
+            display: none;
+            margin-top: $large-size * 2;
+            margin-left: $medium-size;
+            max-height: 40vh;
+            max-width: 70%;
+
+            @include smallScreen {
+                display: block;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include modifier(large) {
+            margin-top: $large-size;
+            margin-left: $medium-size;
+            display: block;
+            max-height: 60vh;
+            max-width: 70%;
+            
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
             }
         }
     }
@@ -188,7 +225,7 @@
         @include smallScreen {
             margin-top: 15vh;
             padding-top: $medium-size;
-            padding-left: $large-size;
+            padding-left: $medium-size;
             padding-right: $small-size;
         }
 

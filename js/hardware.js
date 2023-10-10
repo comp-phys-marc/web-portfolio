@@ -9,7 +9,13 @@ $(document).ready(function() {
 
     $(".section__description__call-to-action").eq(1).click(function() {
         $('html, body').animate({
-            scrollTop: $(".blue").offset().top
+            scrollTop: $("#jaeger").offset().top
+        }, 2000);
+    });
+
+    $(".section__description__call-to-action").eq(2).click(function() {
+        $('html, body').animate({
+            scrollTop: $("#blue").offset().top
         }, 2000);
     });
 });
