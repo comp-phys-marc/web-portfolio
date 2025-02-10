@@ -2,6 +2,44 @@
     background-color: black;
 }
 
+.banner {
+    @include element(image) {
+        border-radius: 0;
+    }
+
+    @include element(title) {
+        position: absolute;
+        font-size: $large-size;
+        top: $large-size;
+        padding-top: 10vh;
+        padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
+        color: $text;
+
+        @include tinyScreen {
+            padding-top: 7vh;
+        }
+    }
+
+    @include element(description) {
+        position: absolute;
+        top: $large-size;
+        padding-top: 5vh;
+        padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
+        color: $text;
+
+        @include tinyScreen {
+            display: none;
+        }
+
+        @include smallScreen {
+            display: none;
+        }
+    }
+}
+
+
 .site--right {
     display: grid;
     grid-template-columns: 34% [col-start] 66% [col-start];

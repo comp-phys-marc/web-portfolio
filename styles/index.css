@@ -525,6 +525,42 @@ img {
   background-color: #70a0af;
 }
 
+.banner__image {
+  border-radius: 0;
+}
+.banner__title {
+  position: absolute;
+  font-size: 42px;
+  top: 42px;
+  margin-top: 10vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+}
+@media only screen and (max-width: 630px) {
+  .banner__title {
+    padding-top: 7vh;
+  }
+}
+.banner__description {
+  position: absolute;
+  top: 42px;
+  margin-top: 25vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+}
+@media only screen and (max-width: 630px) {
+  .banner__description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .banner__description {
+    display: none;
+  }
+}
+
 .app {
   display: grid;
   grid-template-columns: 60% [col-start] 40% [col-start];
@@ -636,6 +672,42 @@ img {
 
 .deborah {
   background-color: black;
+}
+
+.banner__image {
+  border-radius: 0;
+}
+.banner__title {
+  position: absolute;
+  font-size: 42px;
+  top: 42px;
+  padding-top: 10vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+}
+@media only screen and (max-width: 630px) {
+  .banner__title {
+    padding-top: 7vh;
+  }
+}
+.banner__description {
+  position: absolute;
+  top: 42px;
+  padding-top: 5vh;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+}
+@media only screen and (max-width: 630px) {
+  .banner__description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .banner__description {
+    display: none;
+  }
 }
 
 .site--right {

@@ -14,6 +14,43 @@
     background-color: $pass;
 }
 
+.banner {
+    @include element(image) {
+        border-radius: 0;
+    }
+
+    @include element(title) {
+        position: absolute;
+        font-size: $large-size;
+        top: $large-size;
+        margin-top: 10vh;
+        padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
+        color: $text;
+
+        @include tinyScreen {
+            padding-top: 7vh;
+        }
+    }
+
+    @include element(description) {
+        position: absolute;
+        top: $large-size;
+        margin-top: 25vh;
+        padding-left: $xlarge-size;
+        padding-right: $xlarge-size;
+        color: $text;
+
+        @include tinyScreen {
+            display: none;
+        }
+
+        @include smallScreen {
+            display: none;
+        }
+    }
+}
+
 .app {
     display: grid;
     grid-template-columns: 60% [col-start] 40% [col-start];
