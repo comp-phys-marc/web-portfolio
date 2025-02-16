@@ -417,6 +417,17 @@ img {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  iframe {
+    display: none;
+  }
+}
+@media only screen and (max-width: 630px) {
+  iframe {
+    display: none;
+  }
+}
+
 .main-matter {
   width: 100vw;
   position: absolute;
@@ -674,6 +685,14 @@ img {
   background-color: black;
 }
 
+.qee {
+  background-color: black;
+}
+
+.centsite {
+  background-color: black;
+}
+
 .banner__image {
   border-radius: 0;
 }
@@ -681,7 +700,7 @@ img {
   position: absolute;
   font-size: 42px;
   top: 42px;
-  padding-top: 10vh;
+  padding-top: 8vh;
   padding-left: 100px;
   padding-right: 100px;
   color: white;
@@ -766,6 +785,7 @@ img {
 @media only screen and (max-width: 630px) {
   .site--right__description {
     padding-top: 10px;
+    padding-right: 42px;
   }
 }
 .site--right__description__call-to-action {
@@ -775,6 +795,74 @@ img {
   cursor: pointer;
 }
 .site--right__description__call-to-action__arrow {
+  margin-top: -15px;
+}
+.site--left {
+  display: grid;
+  grid-template-columns: 66% [col-start] 34% [col-start];
+  padding-top: 25vh;
+  color: white;
+  height: 85vh;
+}
+@media only screen and (max-width: 1000px) {
+  .site--left {
+    grid-template-columns: 50% [col-start] 50% [col-start];
+  }
+}
+@media only screen and (max-width: 630px) {
+  .site--left {
+    grid-template-columns: 100% [col-start];
+    text-align: center;
+    font-size: small;
+  }
+}
+.site--left__image {
+  max-height: 90%;
+  max-width: 90%;
+  width: auto;
+}
+@media only screen and (max-width: 630px) {
+  .site--left__image {
+    display: none;
+  }
+}
+.site--left__image--tiny {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  height: 25vh;
+  width: auto;
+}
+@media only screen and (max-width: 630px) {
+  .site--left__image--tiny {
+    display: block;
+  }
+}
+.site--left__description {
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 42px;
+}
+@media only screen and (max-width: 1000px) {
+  .site--left__description {
+    padding-top: 22px;
+    padding-left: 42px;
+    padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .site--left__description {
+    padding-top: 10px;
+    padding-right: 42px;
+  }
+}
+.site--left__description__call-to-action {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.site--left__description__call-to-action__arrow {
   margin-top: -15px;
 }
 

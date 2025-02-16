@@ -3,6 +3,16 @@ img {
     border-radius: $small-size; 
 }
 
+iframe {
+    @include smallScreen {
+        display: none;
+    }
+
+    @include tinyScreen {
+        display: none;
+    }
+}
+
 .main-matter {
     width: 100vw;
     position: absolute;

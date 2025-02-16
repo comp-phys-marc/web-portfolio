@@ -2,6 +2,14 @@
     background-color: black;
 }
 
+.qee {
+    background-color: black;
+}
+
+.centsite {
+    background-color: black;
+}
+
 .banner {
     @include element(image) {
         border-radius: 0;
@@ -11,7 +19,7 @@
         position: absolute;
         font-size: $large-size;
         top: $large-size;
-        padding-top: 10vh;
+        padding-top: 8vh;
         padding-left: $xlarge-size;
         padding-right: $xlarge-size;
         color: $text;
@@ -40,70 +48,143 @@
 }
 
 
-.site--right {
-    display: grid;
-    grid-template-columns: 34% [col-start] 66% [col-start];
+.site {
+    @include modifier(right) {
+        display: grid;
+        grid-template-columns: 34% [col-start] 66% [col-start];
 
-    padding-top: 25vh;
+        padding-top: 25vh;
 
-    @include smallScreen {
-        grid-template-columns: 50% [col-start] 50% [col-start];
-    }
-
-    @include tinyScreen {
-        grid-template-columns: 100% [col-start];
-        text-align: center;
-        font-size: small;
-    }
-
-    color: $text;
-    height: 85vh;
-
-    @include element(image) {
-        max-height: 90%;
-        max-width: 90%;
-        width: auto;
-
-        @include tinyScreen {
-            display: none;
+        @include smallScreen {
+            grid-template-columns: 50% [col-start] 50% [col-start];
         }
 
-        @include modifier(tiny) {
-            display: none;
-            margin-left: auto;
-            margin-right: auto;
-            height: 25vh;
+        @include tinyScreen {
+            grid-template-columns: 100% [col-start];
+            text-align: center;
+            font-size: small;
+        }
+
+        color: $text;
+        height: 85vh;
+
+        @include element(image) {
+            max-height: 90%;
+            max-width: 90%;
             width: auto;
 
             @include tinyScreen {
-                display: block;
+                display: none;
+            }
+
+            @include modifier(tiny) {
+                display: none;
+                margin-left: auto;
+                margin-right: auto;
+                height: 25vh;
+                width: auto;
+
+                @include tinyScreen {
+                    display: block;
+                }
+            }
+        }
+
+        @include element(description) {
+            padding-top: $xlarge-size;
+            padding-left: $xlarge-size;
+            padding-right: $large-size;
+
+            @include smallScreen {
+                padding-top: $medium-size;
+                padding-left: $large-size;
+                padding-right: $small-size;
+            }
+
+            @include tinyScreen {
+                padding-top: $small-size;
+                padding-right: $large-size;
+            }
+
+            @include element(call-to-action) {
+                width: 100%;
+                text-align: center;
+                padding-top: $small-size;
+                cursor: pointer;
+
+                @include element(arrow) {
+                    margin-top: -$normal-size;
+                }
             }
         }
     }
 
-    @include element(description) {
-        padding-top: $xlarge-size;
-        padding-left: $xlarge-size;
-        padding-right: $large-size;
+    @include modifier(left) {
+        display: grid;
+        grid-template-columns: 66% [col-start] 34% [col-start];
+
+        padding-top: 25vh;
 
         @include smallScreen {
-            padding-top: $medium-size;
-            padding-left: $large-size;
-            padding-right: $small-size;
+            grid-template-columns: 50% [col-start] 50% [col-start];
         }
 
         @include tinyScreen {
-            padding-top: $small-size;
+            grid-template-columns: 100% [col-start];
+            text-align: center;
+            font-size: small;
         }
 
-        @include element(call-to-action) {
-            width: 100%;
-            text-align: center;
-            padding-top: $small-size;
-            cursor: pointer;
+        color: $text;
+        height: 85vh;
 
-            @include element(arrow) {
-                margin-top: -$normal-size;
+        @include element(image) {
+            max-height: 90%;
+            max-width: 90%;
+            width: auto;
+
+            @include tinyScreen {
+                display: none;
+            }
+
+            @include modifier(tiny) {
+                display: none;
+                margin-left: auto;
+                margin-right: auto;
+                height: 25vh;
+                width: auto;
+
+                @include tinyScreen {
+                    display: block;
+                }
+            }
+        }
+
+        @include element(description) {
+            padding-top: $xlarge-size;
+            padding-left: $xlarge-size;
+            padding-right: $large-size;
+
+            @include smallScreen {
+                padding-top: $medium-size;
+                padding-left: $large-size;
+                padding-right: $small-size;
+            }
+
+            @include tinyScreen {
+                padding-top: $small-size;
+                padding-right: $large-size;
+            }
+
+            @include element(call-to-action) {
+                width: 100%;
+                text-align: center;
+                padding-top: $small-size;
+                cursor: pointer;
+
+                @include element(arrow) {
+                    margin-top: -$normal-size;
+                }
             }
         }
     }
