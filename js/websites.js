@@ -18,4 +18,10 @@ $(document).ready(function() {
             scrollTop: $(".qee-more").offset().top
         }, 2000);
     });
+
+    $(".site--left__description__call-to-action").eq(1).click(function() {
+        $('html, body').animate({
+            scrollTop: $(".deborah").offset().top
+        }, 2000);
+    });
 });
