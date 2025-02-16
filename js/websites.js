@@ -21,7 +21,13 @@ $(document).ready(function() {
 
     $(".site--left__description__call-to-action").eq(1).click(function() {
         $('html, body').animate({
-            scrollTop: $(".deborah").offset().top
+            scrollTop: $(".leadme").offset().top
+        }, 2000);
+    });
+
+    $(".site--right__description__call-to-action").eq(2).click(function() {
+        $('html, body').animate({
+            scrollTop: $(".leadme-more").offset().top
         }, 2000);
     });
 });

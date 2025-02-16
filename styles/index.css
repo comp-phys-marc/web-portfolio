@@ -685,6 +685,16 @@ img {
   background-color: black;
 }
 
+.qee-more {
+  background-color: #f2be42;
+  height: 100vh;
+}
+
+.leadme-more {
+  background-color: #e7eef2;
+  height: 100vh;
+}
+
 .banner__image {
   border-radius: 0;
 }
@@ -723,6 +733,9 @@ img {
 
 .site--more {
   color: white;
+}
+.site--more--light {
+  color: #232323;
 }
 .site--more__description {
   position: absolute;
