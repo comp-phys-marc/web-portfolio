@@ -700,14 +700,14 @@ img {
   position: absolute;
   font-size: 42px;
   top: 42px;
-  padding-top: 8vh;
+  padding-top: 10vh;
   padding-left: 100px;
   padding-right: 100px;
   color: white;
 }
 @media only screen and (max-width: 630px) {
   .banner__title {
-    padding-top: 7vh;
+    padding-top: 6vh;
   }
 }
 .banner__description {
@@ -729,6 +729,63 @@ img {
   }
 }
 
+.site--more {
+  color: white;
+}
+.site--more__description {
+  position: absolute;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 42px;
+}
+@media only screen and (max-width: 1000px) {
+  .site--more__description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .site--more__description {
+    display: none;
+  }
+}
+.site--more__description--tiny {
+  position: absolute;
+  display: none;
+  padding-top: 42px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@media only screen and (max-width: 630px) {
+  .site--more__description--tiny {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .site--more__description--tiny {
+    display: block;
+  }
+}
+.site--more__image {
+  width: 100vw;
+  border-radius: 0;
+}
+@media only screen and (max-width: 630px) {
+  .site--more__image {
+    display: none;
+  }
+}
+.site--more__image--tiny {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  border-radius: 0;
+}
+@media only screen and (max-width: 630px) {
+  .site--more__image--tiny {
+    display: block;
+  }
+}
 .site--right {
   display: grid;
   grid-template-columns: 34% [col-start] 66% [col-start];

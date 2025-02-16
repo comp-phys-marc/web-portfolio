@@ -19,13 +19,13 @@
         position: absolute;
         font-size: $large-size;
         top: $large-size;
-        padding-top: 8vh;
+        padding-top: 10vh;
         padding-left: $xlarge-size;
         padding-right: $xlarge-size;
         color: $text;
 
         @include tinyScreen {
-            padding-top: 7vh;
+            padding-top: 6vh;
         }
     }
 
@@ -49,6 +49,64 @@
 
 
 .site {
+
+    @include modifier(more) {
+
+        color: $text;
+
+        @include element(description) {
+            position: absolute;
+            padding-top: $xlarge-size;
+            padding-left: $xlarge-size;
+            padding-right: $large-size;
+
+            @include smallScreen {
+                display: none;
+            }
+
+            @include tinyScreen {
+                display: none;
+            }
+
+            @include modifier(tiny) {
+                position: absolute;
+                display: none;
+                padding-top: $large-size;
+                padding-left: $xlarge-size;
+                padding-right: $xlarge-size;
+
+                @include tinyScreen {
+                    display: block;
+                }
+
+                @include smallScreen {
+                    display: block;
+                }
+            }
+        }
+
+        @include element(image) {
+            width: 100vw;
+            border-radius: 0;
+
+            @include tinyScreen {
+                display: none;
+            }
+
+            @include modifier(tiny) {
+                display: none;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100vw;
+                border-radius: 0;
+
+                @include tinyScreen {
+                    display: block;
+                }
+            }
+        }
+    }
+
     @include modifier(right) {
         display: grid;
         grid-template-columns: 34% [col-start] 66% [col-start];
