@@ -3,7 +3,7 @@ $(document).ready(function() {
     // scroll
     $(".site--right__description__call-to-action").eq(0).click(function() {
         $('html, body').animate({
-            scrollTop: $(".cents").offset().top
+            scrollTop: $(".centsite").offset().top
         }, 2000);
     });
 
