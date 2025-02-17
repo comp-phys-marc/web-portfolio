@@ -48,6 +48,10 @@
     z-index: -1;
     overflow: hidden;
 
+    @include tinyScreen {
+        display: none;
+    }
+
     @include element(plane) {
         position: absolute;
         height: $large-size;
