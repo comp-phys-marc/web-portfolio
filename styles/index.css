@@ -954,7 +954,7 @@ img {
   background-color: darkslategrey;
 }
 
-.bloch {
+.white {
   background-image: url("https://marcusedwards.me/web-portfolio/images/bloch.png");
   background-repeat: repeat-x repeat-y;
   background-size: 150px;
@@ -976,6 +976,55 @@ img {
   .section {
     grid-template-columns: 100% [col-start];
     text-align: center;
+  }
+}
+.section__video--tiny {
+  display: none;
+  max-height: 50vh;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .section__video--tiny {
+    display: none;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .section__video--tiny {
+    display: block;
+  }
+}
+.section__video--small {
+  display: none;
+  margin-left: 22px;
+  max-height: 40vh;
+  margin-top: 200px;
+}
+@media only screen and (max-width: 1000px) {
+  .section__video--small {
+    display: block;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .section__video--small {
+    display: none;
+  }
+}
+.section__video--large {
+  margin-left: 100px;
+  margin-top: 200px;
+  display: block;
+  max-height: 60vh;
+}
+@media only screen and (max-width: 1000px) {
+  .section__video--large {
+    display: none;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .section__video--large {
+    display: none;
   }
 }
 .section__image--tiny {

@@ -14,7 +14,7 @@
     background-color: darkslategrey;
 }
 
-.bloch {
+.white {
     background-image: url('https://marcusedwards.me/web-portfolio/images/bloch.png');
     background-repeat: repeat-x repeat-y;
     background-size: 150px;
@@ -37,6 +37,55 @@
     color: $text;
 
     height: 85vh;
+
+    @include element(video) {
+
+        @include modifier(tiny) {
+            display: none;
+            max-height: 50vh;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: block;
+            }
+        }
+
+        @include modifier(small) {
+            display: none;
+            margin-left: $medium-size;
+            max-height: 40vh;
+            margin-top: 2 * $xlarge-size;
+
+            @include smallScreen {
+                display: block;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+
+        @include modifier(large) {
+            margin-left: $xlarge-size;
+            margin-top: 2 * $xlarge-size;
+            display: block;
+            max-height: 60vh;
+            
+            @include smallScreen {
+                display: none;
+            }
+    
+            @include tinyScreen {
+                display: none;
+            }
+        }
+    }
 
     @include element(image) {
 
