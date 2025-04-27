@@ -703,6 +703,7 @@ img {
 .leadme-more {
   background-color: #e7eef2;
   height: 100vh;
+  overflow: hidden;
 }
 
 .banner__image {
