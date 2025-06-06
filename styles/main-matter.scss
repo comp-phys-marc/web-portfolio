@@ -32,7 +32,6 @@ iframe {
         @include element(gradient) {
             display: block;
             width: 100%;
-            height: 20%;
             z-index: 10;
             transform: translateY($medium-size);
             background: linear-gradient(360deg, $processor-green, transparent);
@@ -46,6 +45,7 @@ iframe {
             row-gap: $large-size;
             padding: $xlarge-size;
             padding-top: $xlarge-size;
+            min-height: 100vh;
 
             @include smallScreen {
                 grid-template-columns: 100% [col-start];

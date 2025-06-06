@@ -456,7 +456,6 @@ img {
 .main-matter__introduction__gradient {
   display: block;
   width: 100%;
-  height: 20%;
   z-index: 10;
   transform: translateY(22px);
   background: linear-gradient(360deg, #77DD77, transparent);
@@ -469,6 +468,7 @@ img {
   row-gap: 42px;
   padding: 100px;
   padding-top: 100px;
+  min-height: 100vh;
 }
 @media only screen and (max-width: 1000px) {
   .main-matter__introduction__hardware {
