@@ -59,7 +59,7 @@ iframe {
 
             @include element(item) {
                 display: grid;
-                grid-template-columns: [col-start] 60% [col-start] 40%;
+                grid-template-columns: [col-start] 55% [col-start] 45%;
                 column-gap: 9%;
                 
                 @include tinyScreen {
