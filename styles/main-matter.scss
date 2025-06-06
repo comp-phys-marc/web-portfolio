@@ -29,6 +29,69 @@ iframe {
         min-height: 180vh;
         padding-top: 25vh;
 
+        @include element(gradient) {
+            display: block;
+            width: 100%;
+            height: 20%;
+            z-index: 10;
+            transform: translateY($medium-size);
+            background: linear-gradient(360deg, $processor-green, transparent);
+        }
+
+        @include element(hardware) {
+            background-color: $processor-green;
+            display: grid;
+            grid-template-columns: repeat(2, 45% [col-start]);
+            column-gap: 10%;
+            row-gap: $large-size;
+            padding: $xlarge-size;
+            padding-top: $xlarge-size;
+
+            @include smallScreen {
+                grid-template-columns: 100% [col-start];
+            }
+
+            @include element(title) {
+                margin-top: $xlarge-size;
+                padding-top: $xlarge-size;
+                margin-bottom: $xlarge-size;
+            }
+
+            @include element(item) {
+                display: grid;
+                grid-template-columns: [col-start] 60% [col-start] 40%;
+                column-gap: 9%;
+                
+                @include tinyScreen {
+                    grid-template-columns: 100% [col-start];
+                    margin-bottom: $medium-size;
+                }
+
+                img {
+                    max-width: 4 * $xlarge-size;
+                    border-radius: 20px;
+
+                    @include tinyScreen {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                div {
+                    text-align: left;
+                    padding-top: 5vh;
+
+                    @include smallScreen {
+                        padding-top: 2vh;
+                    }
+
+                    @include tinyScreen {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
         @include element(highlights) {
             display: grid;
             grid-template-columns: repeat(2, 45% [col-start]);
