@@ -1,0 +1,303 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='styles/index.css'></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <!-- <img class="chat-bot" src="images/g13630.png" />
+        <div class="chat-window">
+            <div class="chat-window__messages">
+                <div class="chat-window__messages__bot-message"><p>Greetings!</p></div>
+                <div class="chat-window__messages__bot-message"><p>I am an A.I. powered chat bot based on <a href="https://www.tensorflow.org/">TensorFlow</a> and this <a href="https://github.com/comp-phys-marc/language-processing-tools">NLP toolkit</a> by Marcus Edwards. I can help you search this site for any content or information.</p></div>
+                <div class="chat-window__messages__bot-message"><p>In a few words what are you looking for?</p></div>
+            </div>
+            <div class="chat-window__interface">
+                <input class="chat-window__interface__input" type="text" placeholder="Query the A.I." />
+                <img class="chat-window__interface__submit" src="images/g14275.png" />
+            </div>
+        </div> -->
+        <div class='header'>
+            <div class='banner'>
+                <div class='banner__text'>
+                    <p>
+                        Marcus Edwards' Tech Portfolio
+                    </p>
+                </div>
+                <div class='banner__right large-screen'>
+                    <div>
+                        <p class='banner__right__physics' onclick="window.open('https://marcusedwards.me')">
+                            Physics Portfolio
+                        </p>
+                        <p class='banner__right__linkedin' onclick="window.open('https://www.linkedin.com/in/marcus-edwards-98ab8a220/e')">
+                            Linkedin
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class='subheader'>
+                <div class='utility-bar'>
+                    <div class='utility-bar__left'>
+                        <!-- <svg class='utility-bar__left__icon' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="darkgrey" class="h-6 w-6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg> -->
+                        <!-- <svg class='utility-bar__left__icon' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="darkgrey" class="w-6 h-6" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> -->
+                        <a href="index.html"><img src='images/profilepic.jpg'></a>
+                        <a href="websites.html" class='utility-bar__left__link'>Websites</a>
+                        <a href="apps.html" class='utility-bar__left__link'>Apps</a>
+                        <a href="hardware.html" class='utility-bar__left__link'>Hardware</a>
+                        <a href="robotics.html" class='utility-bar__left__link'>Robotics</a> <!-- 
+                        <a href="guitars.html" class='utility-bar__left__link'>Guitars</a>
+                        <a href="ai.html" class='utility-bar__left__link'>A.I.</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="section--right k9">
+                <img class="section__image--tiny" src="images/face.jpg" />
+                <div class="section--right__description section--right__description--dark">
+                    <p>
+                        K-9 has a plywood chassis based on the BBC’s schematics of the K-9 robot from Doctor Who.
+                    <a href="https://marcusedwards-20301.medium.com/building-k-9-from-doctor-who-a34a7eaf686b">Learn more!</a>
+                    </p>
+                    <p class="section__description--large">
+                        An h-bridge controlled geared motor system provides K-9 with mobility. An embedded Raspberry Pi manages the entire system.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Next
+                        </h3>
+                        <h2 class="section__description__call-to-action__arrow">↓</h2>
+                    </div>
+                </div>
+                <img class="section--right__image--large" src="images/k9.png" />
+                <img class="section--right__image--small" src="images/inroom2.jpg" />
+            </div>
+            <div class="section blue" id="blue">
+                <iframe class="frame--large" width="660" height="415" src="https://www.youtube.com/embed/WXpjnJmWfCQ?autoplay=1" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+                <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/WXpjnJmWfCQ?autoplay=1" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+                <div class="section__description">
+                    <p>
+                        K-9 uses <a href="http://espeak.sourceforge.net/">espeak</a>,
+                        a free utility for text-to-voice, to explain the math problems he 
+                        solves, and to say some funny things too. It took a little 
+                        experimenting to get his voice sounding similar to the voice of the K-9 
+                        character in the Doctor Who Sci-Fi series.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Next
+                        </h3>
+                        <h2 class="section__description__call-to-action__arrow">↓</h2>
+                    </div>
+                </div>
+                <p class="section__code">
+                    import os
+                    <br />
+                    os.system('espeak "Daleks are attacking, run for your life." -s 120 -p 0 -v female3')
+                    <br />
+                    os.system('espeak "My favorite color is Tardis blue." -s 120 -p 0 -v female3')
+                </p>
+            </div>
+            <div class="section--right gates">
+                <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/cnbrgNGO0UE" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+                <div class="section--right__description section--right__description--dark">
+                    <p>
+                        K-9 uses a home made CNC machine made from two floppy drives and a CD drive to
+                        write out the solutions to the math problems he solves. The machine is controlled by
+                        three <a href="https://www.sparkfun.com/products/12779">easyDriver stepper motor drivers</a> and an <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino Uno</a>
+                        running <a href="https://github.com/grbl">Grbl</a>,
+                        an open source, embedded, high performance <a href="http://www.cnccookbook.com/CCCNCGCodeBasics.htm">G-code</a> parser and CNC milling controller.
+                        This <a href="https://www.norwegiancreations.com/2014/12/arduino-tutorial-stepper-motor-with-easydriver/">tutorial</a>
+                        describes how to use an easyDriver and an Arduino Uno to control a single stepper motor.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Next
+                        </h3>
+                        <h2 class="section__description__call-to-action__arrow">↓</h2>
+                    </div>
+                </div>
+                <iframe class="frame--large" width="660" height="415" src="https://www.youtube.com/embed/cnbrgNGO0UE" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+            </div>
+            <div class="section k9" id="fluf">
+                <iframe class="frame--large" width="660" height="415" src="https://www.youtube.com/embed/_avED-U86MY?si=iWskUpepltV4-_WK" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+                <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/_avED-U86MY?si=iWskUpepltV4-_WK" title="Nibble Processor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="section__description">
+                    <p>
+                        The i.fluf was the first component of K-9 that I
+                        built. The purpose of the K-9 project was to build
+                        a computer-based robot from scratch, so that I 
+                        could learn everything it takes to succesfully design
+                        and create an intelligent robot. With this goal,
+                        I started the project by designing and building a unique
+                        nibble-sized central processing unit from 
+                        digital primitives in DIP IC packages. Since K-9 was a learning
+                        exercise, which I hoped to share, the processor 
+                        was designed to be extremely accessible, so that a person
+                        could look at it with the naked eye, be able to 
+                        tell that it was working, and deduce what it was doing.
+                    </p>
+                    <p>
+                        Learn more about the processor build in this <a href="https://medium.com/@marcusedwards-20301/building-k-9-from-doctor-who-a34a7eaf686b">article</a>.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Next
+                        </h3>
+                        <h2 class="section__description__call-to-action__arrow">↓</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section--right gates" id="bob">
+                <iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/CAAV6xxMU4s?si=YTspiRvtp2P8fdJT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="section--right__description section--right__description--dark">
+                    <p>
+                        I set out to build a robot to keep me company.
+                        For the chasis, I use OSEPP's mechanical tank robotics kit. On the hardware side, I use a Raspberry Pi 1 Model B, Arduino Uno and Adafuit Motor Control Shield V2. I also need some optical isolators so I use four 4N35's.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Next
+                        </h3>
+                        <h2 class="section__description__call-to-action__arrow">↓</h2>
+                    </div>
+                </div>
+                <iframe class="frame--large" width="660" height="415" src="https://www.youtube.com/embed/CAAV6xxMU4s?si=YTspiRvtp2P8fdJT" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
+            </div>
+            <div class="section blue" id="jaeger">
+                <img class="section__image--large" src="images/jaeger.png" />
+                <img class="section__image--small" src="images/jaeger-small.png" />
+                <img class="section__image--tiny" src="images/ready.jpg" />
+                <div class="section__description">
+                    <p>
+                        Jaeger is the name of the battlebot that my sister and I built for the first ever Great Canadian Bot Brawl which took place during the 2015 <a href="www.makerexpo.ca">Maker Expo</a> at Kitchener City Hall.
+                    </p>
+                    <p class="section__description--large">
+                        We designed Jaeger in AutoCAD and built his chasis using plywood. 
+                        We programmed an Arduino to understand the PWM signals from a radio remote control receiver and control 3 drill motors through a circuit we designed using 4 SPDT relays. My sister and I were able to talk to a reporter from The Star about our robot and were excited to be mentioned in <a href="https://www.thestar.com/news/gta/2015/09/16/bot-brawlers-build-to-win-but-prepare-to-lose.html">this article</a> about the competition.
+                    </p>
+                    <div class="section__description__call-to-action">
+                        <h3>
+                            Top
+                        </h3>
+                        <h2 class="app__description__call-to-action__arrow">↑</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='site-map'>
+                <div class='site-map__grid'>
+                    <div>
+                        <b>Apps</b>
+                        <div>
+                            <a class='site-map__grid__option' href="apps.html#yata">
+                                <small>Yata2Yata</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="apps.html#cents">
+                                <small>Cents</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="apps.html#leadme">
+                                <small>Leadme</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="apps.html#pass">
+                                <small>Password Keeper</small>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <b>Websites</b>
+                        <div>
+                            <a class='site-map__grid__option' href="websites.html#deborah">
+                                <small>Awake Deborah</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="websites.html#centsite">
+                                <small>Cents</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="websites.html#qee">
+                                <small>Q.E.E.</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="websites.html#verona">
+                                <small>Verona High</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="websites.html#leadme">
+                                <small>Leadme</small>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <b>Hardware</b>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html">
+                                <small>Quantum Processors</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html#hall">
+                                <small>Hallbars</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html#emulator">
+                                <small>Emulator</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html#carrier">
+                                <small>Carrier</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html#flasher">
+                                <small>AtTiny Flasher</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="hardware.html#wearable">
+                                <small>Wearable</small>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <b>Robotics</b>
+                        <div>
+                            <a class='site-map__grid__option' href="robotics.html">
+                                <small>K-9</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="robotics.html#bob">
+                                <small>Bob</small>
+                            </a>
+                        </div>
+                        <div>
+                            <a class='site-map__grid__option' href="robotics.html#jaeger">
+                                <small>Jaeger</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script src="js/hardware.js"></script>
+        <script src="js/chat-bot.js"></script>
+    </footer>
+</html>

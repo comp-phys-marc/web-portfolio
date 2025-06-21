@@ -3,16 +3,6 @@ img {
     border-radius: $small-size; 
 }
 
-iframe {
-    @include smallScreen {
-        display: none;
-    }
-
-    @include tinyScreen {
-        display: none;
-    }
-}
-
 .main-matter {
     width: 100vw;
     position: absolute;
@@ -27,7 +17,160 @@ iframe {
         text-align: center;
         align-items: center;
         min-height: 180vh;
-        padding-top: 25vh;
+
+        @include element(gradient) {
+            display: block;
+            width: 100%;
+            z-index: 10;
+            transform: translateY($medium-size);
+            background: linear-gradient(360deg, $processor-green, transparent);
+
+            @include modifier(robotics) {
+                transform: translateY(-$medium-size);
+                // background: linear-gradient(360deg, transparent, $processor-green);
+            }
+        }
+
+        @include element(robots) {
+            background-color: transparent;
+            display: grid;
+            grid-template-columns: repeat(2, 45% [col-start]);
+            column-gap: 10%;
+            row-gap: $large-size;
+            padding: $xlarge-size;
+            padding-top: $xlarge-size;
+            min-height: 100vh;
+
+
+            @include smallScreen {
+                grid-template-columns: 100% [col-start];
+            }
+
+            @include tinyScreen {
+                padding: 1vw;
+            }
+
+            @include element(title) {
+                margin-top: $xlarge-size;
+                padding-top: $xlarge-size;
+                margin-bottom: $xlarge-size;
+            }
+
+            @include element(item) {
+                display: grid;
+                grid-template-columns: [col-start] 100%;
+                column-gap: 9%;
+                
+                @include tinyScreen {
+                    grid-template-columns: 100% [col-start];
+                    margin-bottom: $medium-size;
+                }
+
+                img {
+                    max-width: 4 * $xlarge-size;
+                    border-radius: 20px;
+
+                    @include tinyScreen {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                iframe {
+                    max-width: 4 * $xlarge-size;
+                    border-radius: 20px;
+                    margin-top: $medium-size;
+
+                    @include tinyScreen {
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+
+                div {
+                    text-align: left;
+                    padding-top: 2vh;
+
+                    @include smallScreen {
+                        padding-top: 1vh;
+                    }
+
+                    @include tinyScreen {
+                        text-align: center;
+                    }
+                }
+
+                @include element(button) {
+                    background-color: $violet;
+                    padding: $tiny-size;
+                    color: $white;
+                    border-style: none;
+                    border-radius: 10px;
+                    box-shadow: $xtiny-size $xtiny-size $xtiny-size $darker;
+                    cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: $text;
+                    }
+                }
+            }
+        }
+
+        @include element(hardware) {
+            background-color: $processor-green;
+            display: grid;
+            grid-template-columns: repeat(2, 45% [col-start]);
+            column-gap: 10%;
+            row-gap: $large-size;
+            padding: $xlarge-size;
+            padding-top: $xlarge-size;
+            min-height: 100vh;
+
+            @include smallScreen {
+                grid-template-columns: 100% [col-start];
+            }
+
+            @include element(title) {
+                margin-top: $xlarge-size;
+                padding-top: $xlarge-size;
+                margin-bottom: $xlarge-size;
+            }
+
+            @include element(item) {
+                display: grid;
+                grid-template-columns: [col-start] 55% [col-start] 45%;
+                column-gap: 9%;
+                
+                @include tinyScreen {
+                    grid-template-columns: 100% [col-start];
+                    margin-bottom: $medium-size;
+                }
+
+                img {
+                    max-width: 4 * $xlarge-size;
+                    border-radius: 20px;
+
+                    @include tinyScreen {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                div {
+                    text-align: left;
+                    padding-top: 5vh;
+
+                    @include smallScreen {
+                        padding-top: 2vh;
+                    }
+
+                    @include tinyScreen {
+                        text-align: center;
+                    }
+                }
+            }
+        }
 
         @include element(highlights) {
             display: grid;

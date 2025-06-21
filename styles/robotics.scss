@@ -1,0 +1,144 @@
+.k9 {
+    background-color: darkslategrey;
+}
+
+.section {
+
+    @include element(description) {
+
+        a {
+            color: $white;
+        }
+
+        @include modifier(dark) {
+            background-color: $darker;
+            color: $white;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    iframe {
+        border-radius: 20px;
+        margin-left: 10vw;
+    }
+
+    @include element(code) {
+        background-color: $darker;
+        padding: $small-size;
+        border-radius: 10px;
+        margin-left: 10vw;
+        margin-bottom: auto;;
+        margin-right: auto;
+        width: 60vw;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: $normal-size;
+        color: $white;
+        text-align: left;
+
+        @include tinyScreen {
+            display: none;
+        }
+    }
+
+    @include element(image) {
+        @include modifier(large) {
+            margin-top: 10vh;
+        }
+    }
+
+    @include modifier(right) {
+
+        iframe {
+            border-radius: 20px;
+            margin-left: 10vw;
+        }
+
+        .frame {
+            display: none;
+            max-width: 4 * $xlarge-size;
+            margin-top: 15vh;
+            
+
+            @include smallScreen {
+                display: block;
+                margin-left: 5vw;
+                margin-right: auto;
+            }
+
+            @include modifier(large) {
+                margin-top: 15vh;
+                display: block;
+
+                @include smallScreen {
+                    display: none;
+                }
+            }
+        }
+
+        @include element(image) {
+            @include modifier(large) {
+                margin-top: 15vh;
+            }
+        }
+
+        @include element(description) {
+
+            @include modifier(dark) {
+                background-color: $darker;
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+            }
+
+            margin-top: $xlarge-size;
+            margin-left: $xlarge-size;
+            margin-right: $large-size;
+            margin-bottom: $xlarge-size * 2;
+
+            padding: $small-size;
+
+            @include smallScreen {
+                margin-top: 15vh;
+                padding-top: $medium-size;
+                padding-left: $medium-size;
+                padding-right: $small-size;
+            }
+
+            @include tinyScreen {
+                padding-left: $small-size;
+                padding-right: $small-size;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    
+    .frame {
+        display: none;
+        max-width: 4 * $xlarge-size;
+
+        @include smallScreen {
+            display: block;
+            margin-left: 5vw;
+            margin-right: auto;
+        }
+
+        @include modifier(large) {
+            display: block;
+
+            @include smallScreen {
+                display: none;
+            }
+        }
+    }
+}
+
+.gates {
+    background-image: url('https://marcusedwards.me/web-portfolio/images/gates.png');
+    background-size: 1800px;
+}
