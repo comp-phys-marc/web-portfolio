@@ -450,6 +450,7 @@ img {
 }
 .main-matter__introduction__gradient--robotics {
   transform: translateY(-22px);
+  background: linear-gradient(360deg, transparent, #77DD77);
 }
 .main-matter__introduction__robots {
   background-color: transparent;

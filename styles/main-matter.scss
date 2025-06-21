@@ -27,7 +27,7 @@ img {
 
             @include modifier(robotics) {
                 transform: translateY(-$medium-size);
-                // background: linear-gradient(360deg, transparent, $processor-green);
+                background: linear-gradient(360deg, transparent, $processor-green);
             }
         }
 
