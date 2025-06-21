@@ -268,7 +268,7 @@
   padding-left: 42px;
   padding-right: 42px;
   padding-top: 10px;
-  height: 30vh;
+  min-height: 35vh;
   color: #2d2327;
 }
 @media only screen and (max-width: 630px) {
@@ -422,17 +422,6 @@ img {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 1000px) {
-  iframe {
-    display: none;
-  }
-}
-@media only screen and (max-width: 630px) {
-  iframe {
-    display: none;
-  }
-}
-
 .main-matter {
   width: 100vw;
   position: absolute;
@@ -451,7 +440,6 @@ img {
   text-align: center;
   align-items: center;
   min-height: 180vh;
-  padding-top: 25vh;
 }
 .main-matter__introduction__gradient {
   display: block;
@@ -459,6 +447,87 @@ img {
   z-index: 10;
   transform: translateY(22px);
   background: linear-gradient(360deg, #77DD77, transparent);
+}
+.main-matter__introduction__gradient--robotics {
+  transform: translateY(-22px);
+}
+.main-matter__introduction__robots {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(2, 45% [col-start]);
+  column-gap: 10%;
+  row-gap: 42px;
+  padding: 100px;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 1000px) {
+  .main-matter__introduction__robots {
+    grid-template-columns: 100% [col-start];
+  }
+}
+.main-matter__introduction__robots__title {
+  margin-top: 100px;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+.main-matter__introduction__robots__item {
+  display: grid;
+  grid-template-columns: [col-start] 100%;
+  column-gap: 9%;
+}
+@media only screen and (max-width: 630px) {
+  .main-matter__introduction__robots__item {
+    grid-template-columns: 100% [col-start];
+    margin-bottom: 22px;
+  }
+}
+.main-matter__introduction__robots__item img {
+  max-width: 400px;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 630px) {
+  .main-matter__introduction__robots__item img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main-matter__introduction__robots__item iframe {
+  max-width: 400px;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 630px) {
+  .main-matter__introduction__robots__item iframe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main-matter__introduction__robots__item div {
+  text-align: left;
+  padding-top: 2vh;
+}
+@media only screen and (max-width: 1000px) {
+  .main-matter__introduction__robots__item div {
+    padding-top: 1vh;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .main-matter__introduction__robots__item div {
+    text-align: center;
+  }
+}
+.main-matter__introduction__robots__item__button {
+  background-color: #45364b;
+  padding: 5px;
+  color: #fffdf7;
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 2.5px 2.5px 2.5px #232323;
+  cursor: pointer;
+}
+.main-matter__introduction__robots__item__button a {
+  text-decoration: none;
+  color: white;
 }
 .main-matter__introduction__hardware {
   background-color: #77DD77;
@@ -1317,6 +1386,57 @@ img {
 }
 .section--right__description__call-to-action__arrow {
   margin-top: -15px;
+}
+
+.section__code {
+  background-color: #232323;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10vw;
+  margin-bottom: auto;
+  margin-right: auto;
+  width: 60vw;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  color: #fffdf7;
+}
+.section--right iframe {
+  max-width: 400px;
+  border-radius: 20px;
+  margin-left: 10vw;
+  margin-top: 15vh;
+}
+@media only screen and (max-width: 630px) {
+  .section--right iframe {
+    margin-left: 5vw;
+    margin-right: auto;
+  }
+}
+.section--right__description {
+  margin-left: 15vw;
+}
+@media only screen and (max-width: 630px) {
+  .section--right__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.section iframe {
+  max-width: 400px;
+  border-radius: 20px;
+  margin-left: 10vw;
+}
+@media only screen and (max-width: 630px) {
+  .section iframe {
+    margin-left: 5vw;
+    margin-right: auto;
+  }
+}
+
+.gates {
+  background-image: url("https://marcusedwards.me/web-portfolio/images/gates.png");
+  background-repeat: repeat-x repeat-y;
+  background-size: 150px;
 }
 
 body {

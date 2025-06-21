@@ -57,15 +57,14 @@
         </div>
         <div>
             <div class="section blue" id="blue">
-                <img class="section__image--large" src="images/fridge_blue.png" />
-                <img class="section__image--small" src="images/fridge_blue.png" />
-                <img class="section__image--tiny" src="images/fridge_two_blue.png" />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WXpjnJmWfCQ?autoplay=1" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
                 <div class="section__description">
-                    <p class="section__description--large">
-                        Ge is an appealing candidate for spin systems since it is largely compatible with the industrial manufacturing processes for semiconductors used throughout the world. Ge has recently received significant attention in the research community.
-                    </p>
                     <p>
-                        Ge and Ge/SiGe can facilitate the growth of quantum wells on silicon substrates or other Silicon-Germanium heterostructures. Ge/SiGe QD systems could also be combined in a scalable architecture to implement QPUs.
+                        K-9 uses <a href="http://espeak.sourceforge.net/">espeak</a>,
+                        a free utility for text-to-voice, to explain the math problems he 
+                        solves, and to say some funny things too. It took a little 
+                        experimenting to get his voice sounding similar to the voice of the K-9 
+                        character in the Doctor Who Sci-Fi series.
                     </p>
                     <div class="section__description__call-to-action">
                         <h3>
@@ -74,15 +73,25 @@
                         <h2 class="section__description__call-to-action__arrow">↓</h2>
                     </div>
                 </div>
+                <p class="section__code">
+                    import os
+                    <br />
+                    os.system('espeak "Daleks are attacking, run for your life." -s 120 -p 0 -v female3')
+                    <br />
+                    os.system('espeak "My favorite color is Tardis blue." -s 120 -p 0 -v female3')
+                </p>
             </div>
-            <div class="section--right white bloch">
-                <img class="section--right__image--tiny" src="images/dots.png" />
+            <div class="section--right gates">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cnbrgNGO0UE" frameborder="0" allowfullscreen="" data-ruffle-polyfilled=""></iframe>
                 <div class="section--right__description">
                     <p>
-                        A quiet quantum environment, fast all-electrical qubit manipulation and controllable couplings are necessary ingredients for a scalable QPU architecture. 
-                    </p>
-                    <p class="section__description--large">
-                        Read our <a href="https://www.computer.org/csdl/proceedings-article/qce/2024/413702a589/23oqvyvLv2g">paper on architecture.</a>
+                         K-9 uses a home made CNC machine made from two floppy drives and a CD drive to
+                        write out the solutions to the math problems he solves. The machine is controlled by
+                        three <a href="https://www.sparkfun.com/products/12779">easyDriver stepper motor drivers</a> and an <a href="https://www.arduino.cc/en/Main/ArduinoBoardUno">Arduino Uno</a>
+                        running <a href="https://github.com/grbl">Grbl</a>,
+                        an open source, embedded, high performance <a href="http://www.cnccookbook.com/CCCNCGCodeBasics.htm">G-code</a> parser and CNC milling controller.
+                        This <a href="https://www.norwegiancreations.com/2014/12/arduino-tutorial-stepper-motor-with-easydriver/">tutorial</a>
+                        describes how to use an easyDriver and an Arduino Uno to control a single stepper motor.
                     </p>
                     <div class="section__description__call-to-action">
                         <h3>

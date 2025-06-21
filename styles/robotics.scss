@@ -1,0 +1,55 @@
+.section {
+
+    @include element(code) {
+        background-color: $darker;
+        padding: $small-size;
+        border-radius: 10px;
+        margin-left: 10vw;
+        margin-bottom: auto;;
+        margin-right: auto;
+        width: 60vw;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: $normal-size;
+        color: $white;
+    }
+
+    @include modifier(right) {
+        iframe {
+            max-width: 4 * $xlarge-size;
+            border-radius: 20px;
+            margin-left: 10vw;
+            margin-top: 15vh;
+
+            @include tinyScreen {
+                margin-left: 5vw;
+                margin-right: auto;
+            }
+        }
+
+        @include element(description) {
+            margin-left: 15vw;
+
+            @include tinyScreen {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }   
+    }
+    
+    iframe {
+        max-width: 4 * $xlarge-size;
+        border-radius: 20px;
+        margin-left: 10vw;
+
+        @include tinyScreen {
+            margin-left: 5vw;
+            margin-right: auto;
+        }
+    }
+}
+
+.gates {
+    background-image: url('https://marcusedwards.me/web-portfolio/images/gates.png');
+    background-repeat: repeat-x repeat-y;
+    background-size: 150px;
+}

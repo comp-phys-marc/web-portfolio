@@ -5,7 +5,7 @@
     padding-right: $large-size;
     padding-top: $small-size;
 
-    height: 30vh;
+    min-height: 35vh;
 
     @include tinyScreen() {
         display: none;
