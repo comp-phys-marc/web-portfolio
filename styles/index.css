@@ -1445,6 +1445,11 @@ img {
     margin-right: auto;
   }
 }
+@media only screen and (max-width: 630px) {
+  .section--right .frame {
+    margin-left: 1vw;
+  }
+}
 .section--right .frame--large {
   margin-top: 15vh;
   display: block;
@@ -1496,6 +1501,11 @@ img {
     display: block;
     margin-left: 5vw;
     margin-right: auto;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .section .frame {
+    margin-left: 1vw;
   }
 }
 .section .frame--large {

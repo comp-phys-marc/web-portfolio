@@ -68,6 +68,10 @@
                 margin-right: auto;
             }
 
+            @include tinyScreen {
+                margin-left: 1vw;
+            }
+
             @include modifier(large) {
                 margin-top: 15vh;
                 display: block;
@@ -126,6 +130,10 @@
             display: block;
             margin-left: 5vw;
             margin-right: auto;
+        }
+
+        @include tinyScreen {
+            margin-left: 1vw;
         }
 
         @include modifier(large) {
