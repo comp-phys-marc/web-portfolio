@@ -1,13 +1,29 @@
-iframe {
-    border-radius: 20px;
-    margin-left: 10vw;
-}
-
 .k9 {
     background-color: darkslategrey;
 }
 
 .section {
+
+    @include element(description) {
+
+        a {
+            color: $white;
+        }
+
+        @include modifier(dark) {
+            background-color: $darker;
+            color: $white;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    iframe {
+        border-radius: 20px;
+        margin-left: 10vw;
+    }
 
     @include element(code) {
         background-color: $darker;
@@ -34,6 +50,12 @@ iframe {
     }
 
     @include modifier(right) {
+
+        iframe {
+            border-radius: 20px;
+            margin-left: 10vw;
+        }
+
         .frame {
             display: none;
             max-width: 4 * $xlarge-size;
@@ -63,19 +85,22 @@ iframe {
         }
 
         @include element(description) {
+
+            @include modifier(dark) {
+                background-color: $darker;
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+            }
+
             margin-top: $xlarge-size;
             margin-left: $xlarge-size;
             margin-right: $large-size;
             margin-bottom: $xlarge-size * 2;
 
             padding: $small-size;
-
-            background-color: $darker;
-            color: $white;
-
-            a {
-                color: $white;
-            }
 
             @include smallScreen {
                 margin-top: 15vh;
