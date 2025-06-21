@@ -41,8 +41,13 @@ img {
             padding-top: $xlarge-size;
             min-height: 100vh;
 
+
             @include smallScreen {
                 grid-template-columns: 100% [col-start];
+            }
+
+            @include tinyScreen {
+                padding: 1vw;
             }
 
             @include element(title) {
@@ -74,9 +79,10 @@ img {
                 iframe {
                     max-width: 4 * $xlarge-size;
                     border-radius: 20px;
+                    margin-top: $medium-size;
 
                     @include tinyScreen {
-                        margin-left: auto;
+                        margin-left: 0;
                         margin-right: auto;
                     }
                 }

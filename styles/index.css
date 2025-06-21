@@ -278,7 +278,7 @@
 }
 .site-map__grid {
   display: grid;
-  grid-template-columns: 33% [col-start] 33% [col-start] 33% [col-start];
+  grid-template-columns: 25% [col-start] 25% [col-start] 25% [col-start] 25% [col-start];
   column-gap: 2.66%;
   row-gap: 42px;
 }
@@ -467,6 +467,11 @@ img {
     grid-template-columns: 100% [col-start];
   }
 }
+@media only screen and (max-width: 630px) {
+  .main-matter__introduction__robots {
+    padding: 1vw;
+  }
+}
 .main-matter__introduction__robots__title {
   margin-top: 100px;
   padding-top: 100px;
@@ -496,10 +501,11 @@ img {
 .main-matter__introduction__robots__item iframe {
   max-width: 400px;
   border-radius: 20px;
+  margin-top: 22px;
 }
 @media only screen and (max-width: 630px) {
   .main-matter__introduction__robots__item iframe {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
   }
 }
@@ -1083,10 +1089,6 @@ img {
   background-color: #fffdf7;
 }
 
-.k9 {
-  background-color: darkslategrey;
-}
-
 .white {
   background-image: url("https://marcusedwards.me/web-portfolio/images/bloch.png");
   background-repeat: repeat-x repeat-y;
@@ -1389,6 +1391,24 @@ img {
   margin-top: -15px;
 }
 
+.k9 {
+  background-color: darkslategrey;
+}
+
+.section__description a {
+  color: #fffdf7;
+}
+.section__description--dark {
+  background-color: #232323;
+  color: #fffdf7;
+}
+.section__description--dark a {
+  color: #fffdf7;
+}
+.section iframe {
+  border-radius: 20px;
+  margin-left: 10vw;
+}
 .section__code {
   background-color: #232323;
   padding: 10px;
@@ -1400,44 +1420,107 @@ img {
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   color: #fffdf7;
-}
-.section--right iframe {
-  max-width: 400px;
-  border-radius: 20px;
-  margin-left: 10vw;
-  margin-top: 15vh;
+  text-align: left;
 }
 @media only screen and (max-width: 630px) {
-  .section--right iframe {
+  .section__code {
+    display: none;
+  }
+}
+.section__image--large {
+  margin-top: 10vh;
+}
+.section--right iframe {
+  border-radius: 20px;
+  margin-left: 10vw;
+}
+.section--right .frame {
+  display: none;
+  max-width: 400px;
+  margin-top: 15vh;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right .frame {
+    display: block;
     margin-left: 5vw;
     margin-right: auto;
   }
 }
+@media only screen and (max-width: 630px) {
+  .section--right .frame {
+    margin-left: 1vw;
+  }
+}
+.section--right .frame--large {
+  margin-top: 15vh;
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right .frame--large {
+    display: none;
+  }
+}
+.section--right__image--large {
+  margin-top: 15vh;
+}
 .section--right__description {
-  margin-left: 15vw;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 42px;
+  margin-bottom: 200px;
+  padding: 10px;
+}
+.section--right__description--dark {
+  background-color: #232323;
+  color: #fffdf7;
+}
+.section--right__description--dark a {
+  color: #fffdf7;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right__description {
+    margin-top: 15vh;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-right: 10px;
+  }
 }
 @media only screen and (max-width: 630px) {
   .section--right__description {
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.section iframe {
+.section .frame {
+  display: none;
   max-width: 400px;
-  border-radius: 20px;
-  margin-left: 10vw;
 }
-@media only screen and (max-width: 630px) {
-  .section iframe {
+@media only screen and (max-width: 1000px) {
+  .section .frame {
+    display: block;
     margin-left: 5vw;
     margin-right: auto;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .section .frame {
+    margin-left: 1vw;
+  }
+}
+.section .frame--large {
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  .section .frame--large {
+    display: none;
   }
 }
 
 .gates {
   background-image: url("https://marcusedwards.me/web-portfolio/images/gates.png");
-  background-repeat: repeat-x repeat-y;
-  background-size: 150px;
+  background-size: 1800px;
 }
 
 body {
