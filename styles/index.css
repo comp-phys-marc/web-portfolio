@@ -1082,10 +1082,6 @@ img {
   background-color: #fffdf7;
 }
 
-.k9 {
-  background-color: darkslategrey;
-}
-
 .white {
   background-image: url("https://marcusedwards.me/web-portfolio/images/bloch.png");
   background-repeat: repeat-x repeat-y;
@@ -1388,6 +1384,15 @@ img {
   margin-top: -15px;
 }
 
+iframe {
+  border-radius: 20px;
+  margin-left: 10vw;
+}
+
+.k9 {
+  background-color: darkslategrey;
+}
+
 .section__code {
   background-color: #232323;
   padding: 10px;
@@ -1399,44 +1404,91 @@ img {
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   color: #fffdf7;
-}
-.section--right iframe {
-  max-width: 400px;
-  border-radius: 20px;
-  margin-left: 10vw;
-  margin-top: 15vh;
+  text-align: left;
 }
 @media only screen and (max-width: 630px) {
-  .section--right iframe {
+  .section__code {
+    display: none;
+  }
+}
+.section__image--large {
+  margin-top: 10vh;
+}
+.section--right .frame {
+  display: none;
+  max-width: 400px;
+  margin-top: 15vh;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right .frame {
+    display: block;
     margin-left: 5vw;
     margin-right: auto;
   }
 }
+.section--right .frame--large {
+  margin-top: 15vh;
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right .frame--large {
+    display: none;
+  }
+}
+.section--right__image--large {
+  margin-top: 15vh;
+}
 .section--right__description {
-  margin-left: 15vw;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 42px;
+  margin-bottom: 200px;
+  padding: 10px;
+  background-color: #232323;
+  color: #fffdf7;
+}
+.section--right__description a {
+  color: #fffdf7;
+}
+@media only screen and (max-width: 1000px) {
+  .section--right__description {
+    margin-top: 15vh;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-right: 10px;
+  }
 }
 @media only screen and (max-width: 630px) {
   .section--right__description {
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: auto;
     margin-right: auto;
   }
 }
-.section iframe {
+.section .frame {
+  display: none;
   max-width: 400px;
-  border-radius: 20px;
-  margin-left: 10vw;
 }
-@media only screen and (max-width: 630px) {
-  .section iframe {
+@media only screen and (max-width: 1000px) {
+  .section .frame {
+    display: block;
     margin-left: 5vw;
     margin-right: auto;
+  }
+}
+.section .frame--large {
+  display: block;
+}
+@media only screen and (max-width: 1000px) {
+  .section .frame--large {
+    display: none;
   }
 }
 
 .gates {
   background-image: url("https://marcusedwards.me/web-portfolio/images/gates.png");
-  background-repeat: repeat-x repeat-y;
-  background-size: 150px;
+  background-size: 1800px;
 }
 
 body {
