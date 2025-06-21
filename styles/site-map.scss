@@ -15,7 +15,7 @@
 
     @include element(grid) {
         display: grid;
-        grid-template-columns: 33% [col-start] 33% [col-start] 33% [col-start];
+        grid-template-columns: 25% [col-start] 25% [col-start] 25% [col-start] 25% [col-start];
         column-gap: 2.66%;
         row-gap: $large-size;
 
